@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build NETGEAR-R8000 OpenWrt 2004
+name: Build NETGEAR-R9000 OpenWrt 2004
 
 on:
   repository_dispatch:
@@ -20,8 +20,8 @@ on:
         default: 'false'
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
-  REPO_BRANCH: master
+  REPO_URL: https://github.com/egorenar/openwrt
+  REPO_BRANCH: netgear-r9000
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: R8000_SSR_20230331.config
   DIY_P1_SH: diy-part1.sh
@@ -148,7 +148,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-NETGEAR-R8000">> $GITHUB_OUTPUT
+        echo "release_tag=$(date +"%Y.%m.%d-%H%M")-NETGEAR-R9000">> $GITHUB_OUTPUT
         touch release.txt
         echo "status=success" >> $GITHUB_OUTPUT
 
