@@ -23,7 +23,7 @@ env:
   REPO_URL: https://github.com/egorenar/openwrt
   REPO_BRANCH: netgear-r9000
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: R8000_SSR_20230331.config
+  CONFIG_FILE: R9000_SSR_20230403.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_FIRMWARE: true
